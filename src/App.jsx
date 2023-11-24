@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-    <h1>Explore the hitesh choudary playlist plus practice some intermediate concepts too</h1>
+    <h1>Let&#8217;s learn reducer </h1>
     </>
   )
 }
