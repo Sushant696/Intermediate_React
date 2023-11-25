@@ -21,28 +21,28 @@ function Context() {
     <div>
       <h1>{state}</h1>
       <button
-      style={{padding:".5rem" , margin:'.5rem', borderRadius:'8px'}} 
+      className="px-6 py-3 m-3 rounded-[8px]"
         onClick={() => {
-          dispatch("add to cart");
+          dispatch({type :"add to cart"});
         }}
       >
         Add to cart
       </button>
       <button
-      style={{padding:".5rem" , margin:'.5rem', borderRadius:'8px'}} 
+      className="px-6 py-3 m-3 rounded-[8px]" 
         onClick={() => {
-          dispatch("remove from cart");
+          dispatch({type:"remove from cart"});
         }}
       >
         Remove from cart
       </button>
       <button
-      style={{padding:".5rem" , margin:'.5rem', borderRadius:'8px'}} 
+      className="px-6 py-3 m-3 rounded-[8px]" 
         onClick={() => {
-          dispatch("reset");
+          dispatch({type:"reset"});
         }}
       >
-        reset cart
+        Reset Cart
       </button>
     </div>
   );
