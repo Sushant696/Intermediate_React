@@ -14,7 +14,7 @@ const reducer = (state, action) => {
   }
 };
 
-// my component
+// my componentz
 function Counter() {
   const [count, dispatch] = useReducer(reducer, initialState); // count is a current state we defined
 

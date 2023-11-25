@@ -1,14 +1,30 @@
-import { useReducer } from "react"
+// using reducer for the first time
 
-function Reducer() {
-  const [state , dispatch] = useReducer();
-  return (
-    <div>
-        <h1>
-        useReducer hook      
-        </h1>
-    </div>
-  )
-}
+export const initialState = {
+  total: 0,
+  products: [],
+};
 
-export default Reducer
+const storeReducer = (state, action) => {
+  switch (action.type) {
+    case  'add' :
+        return {
+            ...state,
+            products:action.payload
+        }
+    case 'remove':
+        return {
+            ...state ,
+            products : action.payload
+        }
+    case 'update' :
+        return{
+            ...state,
+            total : action.payload
+
+        }
+    default :throw Error("Cannot match case in reducer")
+  }
+};
+
+export default storeReducer
